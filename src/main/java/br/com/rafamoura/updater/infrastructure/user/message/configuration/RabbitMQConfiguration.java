@@ -1,5 +1,6 @@
 package br.com.rafamoura.updater.infrastructure.user.message.configuration;
 
+import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.JacksonJsonMessageConverter;
@@ -24,5 +25,20 @@ public class RabbitMQConfiguration {
         RabbitTemplate template = new RabbitTemplate(connectionFactory);
         template.setMessageConverter(jsonMessageConverter);
         return template;
+    }
+
+    @Bean
+    public Queue updateUserQueue() {
+        return new Queue("updater.user", true);
+    }
+
+    @Bean
+    public DirectExchange updateUserExchange() {
+        return new DirectExchange("updater.ex");
+    }
+
+    @Bean
+    public Binding binding(Queue updateUserQueue, DirectExchange updateUserExchange) {
+        return BindingBuilder.bind(updateUserQueue).to(updateUserExchange).with("updater.user");
     }
 }
