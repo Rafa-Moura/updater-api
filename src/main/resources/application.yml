@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: updater
+
+  datasource:
+    url: jdbc:h2:mem:updater
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+    h2:
+      console:
+        enabled: true
+        path: /h2-console
+    jpa:
+      spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    listener:
+      simple:
+        concurrency: 3
+        max-concurrency: 6
+        retry:
+          enabled: false
+    template:
+      retry:
+        enabled: false
+
+  clients:
+    external-service: "https://viacep.com.br"

@@ -1,0 +1,15 @@
+INSERT INTO tb_users(id, name, email, phone, register_status, created_at, updated_at) values (1, 'THIAGO', 'thiago@gmail.com', '11999999001', 'PENDING', NOW(), NOW());
+INSERT INTO tb_users(id, name, email, phone, register_status, created_at, updated_at) values (2, 'MARIA', 'maria@gmail.com', '11999999002', 'PENDING', NOW(), NOW());
+INSERT INTO tb_users(id, name, email, phone, register_status, created_at, updated_at) values (3, 'JOAO', 'joao@gmail.com', '11999999003', 'PENDING', NOW(), NOW());
+INSERT INTO tb_users(id, name, email, phone, register_status, created_at, updated_at) values (4, 'ANA', 'ana@gmail.com', '11999999004', 'PENDING', NOW(), NOW());
+INSERT INTO tb_users(id, name, email, phone, register_status, created_at, updated_at) values (5, 'CARLOS', 'carlos@gmail.com', '11999999005', 'PENDING', NOW(), NOW());
+INSERT INTO tb_users(id, name, email, phone, register_status, created_at, updated_at) values (6, 'LUCIA', 'lucia@gmail.com', '11999999006', 'PENDING', NOW(), NOW());
+INSERT INTO tb_users(id, name, email, phone, register_status, created_at, updated_at) values (7, 'PEDRO', 'pedro@gmail.com', '11999999007', 'PENDING', NOW(), NOW());
+INSERT INTO tb_users(id, name, email, phone, register_status, created_at, updated_at) values (8, 'FERNANDA', 'fernanda@gmail.com', '11999999008', 'PENDING', NOW(), NOW());
+INSERT INTO tb_users(id, name, email, phone, register_status, created_at, updated_at) values (9, 'RICARDO', 'ricardo@gmail.com', '11999999009', 'PENDING', NOW(), NOW());
+INSERT INTO tb_users(id, name, email, phone, register_status, created_at, updated_at) values (10, 'BEATRIZ', 'beatriz@gmail.com', '11999999010', 'PENDING', NOW(), NOW());
+INSERT INTO tb_users(id, name, email, phone, register_status, created_at, updated_at) values (11, 'GABRIEL', 'gabriel@gmail.com', '11999999011', 'PENDING', NOW(), NOW());
+INSERT INTO tb_users(id, name, email, phone, register_status, created_at, updated_at) values (12, 'PATRICIA', 'patricia@gmail.com', '11999999012', 'PENDING', NOW(), NOW());
+INSERT INTO tb_users(id, name, email, phone, register_status, created_at, updated_at) values (13, 'MATEUS', 'mateus@gmail.com', '11999999013', 'PENDING', NOW(), NOW());
+INSERT INTO tb_users(id, name, email, phone, register_status, created_at, updated_at) values (14, 'JULIANA', 'juliana@gmail.com', '11999999014', 'PENDING', NOW(), NOW());
+INSERT INTO tb_users(id, name, email, phone, register_status, created_at, updated_at) values (15, 'RAFAEL', 'rafael@gmail.com', '11999999015', 'PENDING', NOW(), NOW())
