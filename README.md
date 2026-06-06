@@ -42,20 +42,6 @@ Key implementation files:
 - Concurrent scheduler runs: scheduler should be idempotent at the service level to avoid conflicting updates when multiple instances run.
 - Database constraint violations: repository operations should surface errors and be handled in consumers to avoid message loss (use retries or DLQ).
 
-**Draws**
-High-level architecture:
-
-```mermaid
-graph LR
-  Scheduler[Scheduler] -->|trigger| UpdaterService[UpdateService]
-  UpdaterService -->|publish per-user message| Producer[Message Producer]
-  Producer --> Rabbit[ RabbitMQ ]
-  Rabbit --> APIConsumer[API (consumer)]
-  APIConsumer -->|http call| External[External Client]
-  APIConsumer -->|update register_status| Repository[(UserJpaRepository)]
-  Repository --> DB[(H2 Database)]
-```
-
 Scheduler -> publish flow (detailed):
 
 ```mermaid
