@@ -29,7 +29,7 @@ public class RabbitMQConfiguration {
 
     @Bean
     public Queue updateUserQueue() {
-        return new Queue("updater.user", true);
+        return new Queue("updater.queue", true);
     }
 
     @Bean
@@ -39,6 +39,6 @@ public class RabbitMQConfiguration {
 
     @Bean
     public Binding binding(Queue updateUserQueue, DirectExchange updateUserExchange) {
-        return BindingBuilder.bind(updateUserQueue).to(updateUserExchange).with("updater.user");
+        return BindingBuilder.bind(updateUserQueue).to(updateUserExchange).with("updater.queue");
     }
 }
